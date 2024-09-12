@@ -1,0 +1,202 @@
+/* Basic Reset and Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1e1e2f;
+    color: #e0e0e0;
+    overflow-x: hidden;
+}
+
+section {
+    height: 100vh;
+    padding: 10px 10%;
+}
+
+.navbar {
+    height: 10vh;
+    background-color: #121212;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    border-radius: 50px;
+}
+
+.nav-l {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ff8c00;
+    cursor: pointer;
+}
+
+.nav-m {
+    display: flex;
+    gap: 5rem;
+    list-style: none;
+}
+
+.nav-m li a {
+    text-decoration: none;
+    color: #e0e0e0;
+    font-weight: 500;
+    font-size: 1.1rem;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.nav-m li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #ff8c00;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s;
+}
+
+.nav-m li a.active::after,
+.nav-m li a:hover::after {
+    width: 100%;
+}
+
+.nav-m li a.active {
+    color: #ff8c00;
+}
+
+.nav-r {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-r img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #ff8c00;
+    box-shadow: 0 0 10px rgba(255, 140, 0, 0.7);
+    transition: transform 0.3s;
+}
+
+.nav-r img:hover {
+    transform: scale(1.1);
+}
+
+.nav-r p {
+    margin: 0;
+    font-size: 1rem;
+    color: #e0e0e0;
+    font-weight: 500;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.left {
+    flex: 0 0 60%;
+}
+
+.right {
+    flex: 0 0 35%;
+}
+
+.profile-summary,
+.daily-checklist,
+.progress-tracker,
+.motivational-quotes {
+    background: #2c2c3d;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: #e0e0e0;
+}
+
+.profile-summary {
+    display: flex;
+    justify-content: space-between;
+}
+
+.details {
+    color: #ff8c00;
+    padding-bottom: 10px;
+}
+
+.hero {
+    display: flex;
+    align-self: center;
+}
+
+.hero img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid #ff8c00;
+}
+
+.checklist-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.checklist-table th,
+.checklist-table td {
+    border: 1px solid #444;
+    padding: 10px;
+    text-align: left;
+}
+
+.checklist-table th {
+    background-color: #333;
+}
+
+.checklist-table input {
+    margin-right: 5px;
+}
+
+.progress-tracker .chart-placeholder {
+    height: 200px;
+    background: #3d3d4f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.weekly-timetable,
+.motivational-quotes {
+    background: #2c2c3d;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.weekly-timetable .timetable-list {
+    list-style-type: none;
+}
+
+.weekly-timetable .timetable-list li {
+    padding: 5px 0;
+}
+
+.weekly-timetable .timetable-list hr {
+    border: 1px solid #444;
+    margin: 5px 0;
+}
+
+.motivational-quotes p {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 10px;
+}

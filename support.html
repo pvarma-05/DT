@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fit-Sense</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" href="/assets/fS.png">
+</head>
+
+<body>
+    <section class="home">
+        <nav class="navbar">
+            <div class="nav-l logo">FitSense</div>
+            <div>
+                <ul class="nav-m">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/fitness">Fitness</a></li>
+                    <li><a href="/nutrition">Nutrition</a></li>
+                    <li><a href="/support" class="active">Support</a></li>
+                </ul>
+            </div>
+            <div class="nav-r">
+                <a href="/logout"><img src="/assets/boy.png" alt="profile"></a>
+                <p>Pradeep Varma</p>
+            </div>
+        </nav>
+    </section>
+    <script>
+        document.querySelector(".logo").addEventListener("click", function () {
+            window.location.href = "/";
+        });
+    </script>
+</body>
+</html>

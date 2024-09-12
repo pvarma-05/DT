@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitSense - Login & Signup</title>
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="icon" href="/assets/fS.png">
+</head>
+
+<body>
+    <div class="login-signup-container">
+        <div class="box">
+            <!-- Content Panel -->
+            <div class="content-box" id="content-box">
+                <!-- Initial Content -->
+                <div id="login-content" class="content-panel">
+                    <h2>Welcome Back to <span style="color: #ff8c00;">FitSense</span></h2>
+                    <br>
+                    <p>We’re glad to see you again. Please log in to continue where you left off!</p>
+                </div>
+                <!-- Signup Content -->
+                <div id="signup-content" class="content-panel hidden">
+                    <h2>Welcome to <span style="color: #ff8c00;">FitSense</span></h2>
+                    <br>
+                    <p>Join us today to start your journey towards a healthier lifestyle!</p>
+                </div>
+            </div>
+
+            <!-- Form Panel -->
+            <div class="form-box">
+                <!-- Login Form -->
+                <form id="login-form" class="form active" action="/" method="post">
+                    <h2><span style="color: #ff8c00;">Login</span></h2>
+                    <br>
+                    <div class="input-group">
+                        <label for="login-username">Username</label>
+                        <input type="text" id="login-username" name="username" placeholder="Enter your username" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" name="password" placeholder="Enter your password" required>
+                    </div>
+                    <button type="submit" class="login-btn">Login</button>
+                    <p class="toggle-form">New user? <a href="#" id="show-signup">Sign up</a></p>
+                </form>
+
+                <!-- Signup Form -->
+                <form id="signup-form" class="form" action="/" method="post">
+                    <h2><span style="color: #ff8c00;">Sign Up</span></h2>
+                    <br>
+                    <div class="input-group">
+                        <label for="signup-username">Username</label>
+                        <input type="text" id="signup-username" name="username" placeholder="Choose a username" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="signup-email">Email</label>
+                        <input type="email" id="signup-email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="signup-password">Password</label>
+                        <input type="password" id="signup-password" name="password" placeholder="Create a password" required>
+                    </div>
+                    <button type="submit" class="login-btn">Sign Up</button>
+                    <p class="toggle-form">Already have an account? <a href="#" id="show-login">Login</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('show-signup').addEventListener('click', function () {
+            document.querySelector('.box').classList.add('slide');
+            document.getElementById('login-form').classList.remove('active');
+            document.getElementById('signup-form').classList.add('active');
+            document.getElementById('login-content').classList.add('hidden');
+            document.getElementById('signup-content').classList.remove('hidden');
+        });
+
+        document.getElementById('show-login').addEventListener('click', function () {
+            document.querySelector('.box').classList.remove('slide');
+            document.getElementById('signup-form').classList.remove('active');
+            document.getElementById('login-form').classList.add('active');
+            document.getElementById('signup-content').classList.add('hidden');
+            document.getElementById('login-content').classList.remove('hidden');
+        });
+    </script>
+</body>
+
+</html>

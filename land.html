@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitSense : Smart Fitness & Nutrition Assistant</title>
+    <link rel="stylesheet" href="/css/land.css">
+    <link rel="icon" href="/assets/fS.png">
+</head>
+
+<body>
+    
+    <section class="home" id="home">
+        <nav class="navbar">
+            <div class="nav-l logo">FitSense</div>
+            <div>
+                <ul class="nav-m">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#features">Features</a></li>
+                </ul>
+            </div>
+            <div>
+                <button class="login-btn"><a href="/login">Login</a></button>
+            </div>
+        </nav>
+        <div class="main-1">
+            <div>
+                <img src="/assets/fS.png" alt="logo">
+            </div>
+            <div>
+                <h1><span class="highlight">FitSense</span></h1>
+                <p>The Smart Fitness & Nutrition Assistant</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="content">
+        <h1><span class="highlight">About</span> Our App</h1>
+        <div class="main-2">
+            <img src="/assets/abt.jpg" alt="about">
+            <p>Welcome to FitSense! Your ultimate companion for achieving a healthier lifestyle. Our app helps you track your fitness progress, monitor your BMI, and receive personalized nutrition plans that align with your fitness goals—whether it's weight loss, muscle gain, or maintaining a balanced diet.</p>
+        </div>
+    </section>
+
+    <section id="features" class="content">
+        <h1>Key <span class="highlight">Features</span></h1>
+        <div class="main-2">
+            <p>Our app provides advanced features, including AI-based nutritional advice, customizable meal plans, and fitness tracking. Get started today to discover a tailored approach to your fitness journey, complete with real-time updates and personalized diet recommendations.</p>
+            <img src="/assets/features.jpg" alt="features">
+        </div>
+        <button class="login-btn1"><a href="/login">Get Started</a></button>
+        <footer>
+            <p>&copy; 2024 FitSense All rights reserved.</p>
+        </footer>
+    </section>
+
+    <script>
+        document.querySelector(".logo").addEventListener("click", function () {
+            window.location.href = "/";
+        });
+    </script>
+</body>
+
+</html>

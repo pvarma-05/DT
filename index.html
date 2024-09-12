@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitSense Home</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" href="/assets/fS.png">
+</head>
+
+<body>
+    <section class="home">
+        <nav class="navbar">
+            <div class="nav-l logo">FitSense</div>
+            <div>
+                <ul class="nav-m">
+                    <li><a href="/" class="active">Home</a></li>
+                    <li><a href="/fitness">Fitness</a></li>
+                    <li><a href="/nutrition">Nutrition</a></li>
+                    <li><a href="/support">Support</a></li>
+                </ul>
+            </div>
+            <div class="nav-r">
+                <a href="/logout"><img src="/assets/boy.png" alt="profile"></a>
+                <p>Pradeep Varma</p>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="left">
+                <!-- Profile Summary -->
+                <div class="profile-summary">
+                    <div class="profile-info">
+                        <h2 class="details">Welcome Back <span style="color: white;">Pradeep Varma!</span></h2>
+                        <div>
+                            <p><strong>BMI Category:</strong> Overweight</p>
+                            <p><strong>Current Weight:</strong> 75 kg</p>
+                            <p><strong>Goal Weight:</strong> 70 kg</p>
+                        </div>
+                    </div>
+                    <div class="hero">
+                        <img src="/assets/boy.png" alt="Profile Picture">
+                    </div>
+                </div>
+
+                <!-- Daily Checklist -->
+                <div class="daily-checklist">
+                    <h3 class="details">Today's Checklist</h3>
+                    <table class="checklist-table">
+                        <thead>
+                            <tr>
+                                <th>Nutrition</th>
+                                <th>Fitness</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="nutrition1">
+                                    <label for="nutrition1">Breakfast: Oats & Fruits</label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" id="fitness1">
+                                    <label for="fitness1">Morning Run</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="nutrition2">
+                                    <label for="nutrition2">Lunch: Salad & Grilled Chicken</label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" id="fitness2">
+                                    <label for="fitness2">Yoga Session</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="nutrition3">
+                                    <label for="nutrition3">Dinner: Steamed Veggies & Fish</label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" id="fitness3">
+                                    <label for="fitness3">Evening Walk</label>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Progress Tracker -->
+                <div class="progress-tracker">
+                    <h3 class="details">Progress Tracker</h3>
+                    <div class="charts">
+                        <!-- Placeholder for progress charts -->
+                        <div class="chart-placeholder">Graph here</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right">
+                <!-- Weekly Timetable -->
+                <div class="weekly-timetable">
+                    <h3 class="details">Weekly Timetable</h3>
+                    <ul class="timetable-list">
+                        <li>
+                            <strong>Monday:</strong> Oats, Chicken Salad | Run, Strength Training
+                        </li>
+                        <hr>
+                        <li>
+                            <strong>Tuesday:</strong> Smoothie, Quinoa Bowl | HIIT, Yoga
+                        </li>
+                        <hr>
+                        <li>
+                            <strong>Wednesday:</strong> Eggs, Brown Rice | Cardio, Pilates
+                        </li>
+                        <hr>
+                        <li>
+                            <strong>Thursday:</strong> Fruits, Pasta | Cycling, Meditation
+                        </li>
+                        <hr>
+                        <li>
+                            <strong>Friday:</strong> Toast, Soup | Swimming, Stretching
+                        </li>
+                        <hr>
+                        <li>
+                            <strong>Saturday:</strong> Porridge, Grilled Fish | Hiking, Core Workout
+                        </li>
+                        <hr>
+                        <li>
+                            <strong>Sunday:</strong> Rest Day | Light Stretching
+                        </li>
+                    </ul>
+                </div>
+                <!-- Motivational Quotes -->
+                <div class="motivational-quotes">
+                    <h3 class="details">Motivational Quote of the Day</h3>
+                    <p>"The only bad workout is the one that didn’t happen."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const nutritionCheckbox = document.getElementById('nutrition');
+            const exerciseCheckbox = document.getElementById('exercise');
+
+            nutritionCheckbox.addEventListener('change', updateProgress);
+            exerciseCheckbox.addEventListener('change', updateProgress);
+
+            function updateProgress() {
+                // This function should be expanded to update actual progress tracking.
+                console.log('Progress updated');
+            }
+        });
+        document.querySelector(".logo").addEventListener("click", function () {
+            window.location.href = "/";
+        });
+    </script>
+</body>
+
+</html>
